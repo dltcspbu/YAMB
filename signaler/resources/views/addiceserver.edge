@@ -1,0 +1,21 @@
+<div class="box">
+  <h2 class="title">ОСНОВНОЙ ЦЕНТР УПРАВЛЕНИЯ ПОЛЁТАМИ ХОЛОДНЫХ СЕРВЕРОВ</h2>
+  <form action="/removing_ice_server" method="POST">
+    {{ csrfField }}
+        @each(url in urls)
+        <button type="submit" style="display:block;" name="iceserver" type="text" placeholder="IceServer" value="{{ url }}">{{ url }}</button>
+        @endeach
+  </form>
+  <form action="/adding_ice_server" method="POST">
+    {{ csrfField }}
+        <input  type="text" size="50" name="iceserver" placeholder="type:owner:secretkey@host:port">
+        <p>  <b>type</b>       = { 'stun', 'turn'} : <b>required</b>
+        <br> <b>owner</b>      = 'Owner name' : <b>required </b>
+        <br> <b>secretkey</b>  = 'Secret string' : <b>optional</b> 
+        <br> <b>host</b>       = 'ip-address|domain-name' : <b>required</b> 
+        <br> <b>port</b>       = integer <b>required</b> </p>
+        <button type="submit" class="button">
+            Confirm
+        </button>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="box">
+  <h2 class="title">Enter RTMP stream URL to delete</h2>
+  <form action="/removing" method="POST">
+    {{ csrfField }}
+        @each(url in urls)
+        <button type="submit" style="display:block;" name="rtmp" type="text" name="rtmp" placeholder="RTMP URL" value="{{ url }}">{{ url }}</a>
+        @endeach
+  </form>
+</div>
