@@ -1,7 +1,7 @@
 # YAMB
 
 Yet Another Message Broker (YAMB). 
-This repository containt distributed message broker on top of WebRTC created to test full MADT (https://github.com/dltcspbu/madt)  functionality.
+This repository contains p2p message broker on top of WebRTC created to test full MADT (https://github.com/dltcspbu/madt)  functionality.
 
 
 Building:
